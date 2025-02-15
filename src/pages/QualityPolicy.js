@@ -63,7 +63,7 @@ function QualityPolicy() {
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 md:py-14 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <FadeDown>
               <h1 className="text-4xl md:text-[42px] lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6">
                 Quality Policy
@@ -71,7 +71,7 @@ function QualityPolicy() {
             </FadeDown>
 
             <FadeUp className="max-w-3xl mx-auto space-y-4">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className=" text-base md:text-lg text-gray-600 leading-relaxed">
                 We strive for continuous{" "}
                 <span className="font-semibold"> improvements</span> to meet or
                 exceed the expectations of our{" "}
@@ -92,14 +92,15 @@ function QualityPolicy() {
           </div>
 
           {/* Policy Points Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12 md:mb-16">
             {policyPoints.map((point, index) => (
               <FadeUp key={index} delay={index * 0.1}>
                 <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 py-6 md:p-6 h-full border">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 ml-2">
                       {point.icon}
                     </div>
+
                     <p className="text-gray-600 leading-relaxed">
                       {point.text}
                     </p>
@@ -116,11 +117,11 @@ function QualityPolicy() {
                 <div className="flex justify-center mb-6">
                   <Quote className="h-12 w-12 opacity-50" />
                 </div>
-                <p className="text-2xl font-medium mb-6 italic">
+                <p className=" text-lg md:text-2xl font-medium mb-6 italic">
                   "Where Innovation, Technology & Quality Drive Responsible
                   Chemistry"
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-2 text-xl font-bold text-blue-100">
+                <div className="hidden md:flex flex-wrap items-center justify-center gap-2 text-xl font-bold text-blue-100">
                   <FadeLeft delay={0.2}>
                     <span className="flex items-center mr-4">
                       <Shield className="h-5 w-5 mr-2" />
@@ -134,12 +135,38 @@ function QualityPolicy() {
                       INNOVATION
                     </span>
                   </FadeUp>
+
                   <FadeRight delay={0.2}>
                     <span className="flex items-center">
                       <Lock className="h-5 w-5 mr-2" />
                       SAFETY
                     </span>
                   </FadeRight>
+                </div>
+
+                <div className="flex md:hidden flex-wrap items-center justify-center gap-2 text-xl font-bold text-blue-100">
+                  <div className=" flex ">
+                    <FadeLeft delay={0.2}>
+                      <span className="flex items-center mr-4">
+                        <Shield className="h-5 w-5 mr-2" />
+                        TRUST
+                      </span>
+                    </FadeLeft>
+
+                    <FadeRight delay={0.2}>
+                      <span className="flex items-center">
+                        <Lock className="h-5 w-5 mr-2" />
+                        SAFETY
+                      </span>
+                    </FadeRight>
+                  </div>
+
+                  <FadeUp delay={0.3}>
+                    <span className="flex items-center mr-4">
+                      <CheckCircle2 className="h-5 w-5 mr-2" />
+                      INNOVATION
+                    </span>
+                  </FadeUp>
                 </div>
               </div>
             </div>
