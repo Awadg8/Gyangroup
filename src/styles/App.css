@@ -1,0 +1,169 @@
+.about-header-menu {
+    top: 120px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #eee;
+    transition: all 0.6s ease;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+.about-header:hover .about-header-menu {
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease;
+    position: absolute;
+}
+
+.product-header-menu {
+    top: 120px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #eee;
+    transition: all 0.6s ease;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+.product-header:hover .product-header-menu {
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease;
+    position: absolute;
+}
+
+/* CSS */
+#viewer {
+    width: 100%;
+    /* or a fixed width like 600px */
+    height: 500px;
+    /* Ensure height is not 0 */
+}
+
+
+.hero-area-bg-1 {
+    background-image: url(../Assets/Images/slider1.jpg);
+}
+
+.hero-area-bg-2 {
+    background-image: url(../Assets/Images/slider2.jpg);
+}
+
+.hero-area-bg-3 {
+    background-image: url(../Assets/Images/slider3.jpg);
+}
+
+
+.slick-prev,
+.slick-next {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.slick-next::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E%0A");
+}
+
+.slick-prev::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z'/%3E%3C/svg%3E");
+}
+
+
+.homepage-slides:hover .slick-prev,
+.homepage-slides:hover .slick-next {
+    opacity: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1;
+}
+
+.slick-dots {
+    bottom: 20px;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #d1d5db;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #4a7dbc;
+    font-size: 16px;
+}
+
+.btn::before {
+    font-size: 40px;
+}
+
+.single-slide-item {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    display: table !important;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-area-content {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+
+/* Main Section Feature part */
+
+.fbox-photo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 6px;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 75%);
+}
+
+
+.timeline:before,
+.timeline:after {
+    content: '';
+    position: absolute;
+}
+
+
+
+.timeline:before {
+    background-color: #4a7dbc;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff;
+    height: 12px;
+    left: 76px;
+    top: 6px;
+    width: 12px;
+    z-index: 1;
+}
+
+
+.timeline:after {
+    background-color: #e4e4e4;
+    bottom: 0;
+    left: 80px;
+    width: 2px;
+}
