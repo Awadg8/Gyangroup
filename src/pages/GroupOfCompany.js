@@ -135,7 +135,7 @@ function CompanyCard({
                 {company.description}
               </p>
 
-              <div className="flex items-start space-x-3 mb-8">
+              <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
                 <p className="text-gray-600">{company.address}</p>
               </div>
@@ -173,7 +173,7 @@ function CompanyCard({
                 {company.description}
               </p>
 
-              <div className="flex items-start space-x-3 mb-8">
+              <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
                 <p className="text-gray-600">{company.address}</p>
               </div>

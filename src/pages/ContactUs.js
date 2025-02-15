@@ -75,7 +75,7 @@ function ContactUs() {
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FadeLeft className="md:col-span-2 bg-white rounded-lg shadow-lg p-8">
+            <FadeLeft className="md:col-span-2 bg-white rounded-lg shadow-lg px-4 py-8 md:p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 Get in Touch
               </h2>
@@ -216,7 +216,7 @@ function ContactUs() {
               </form>
             </FadeLeft>
 
-            <FadeRight className="bg-white rounded-lg shadow-lg p-8">
+            <FadeRight className="bg-white rounded-lg shadow-lg py-8 px-4 md:p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 Contact Information
               </h2>
@@ -262,7 +262,7 @@ function ContactUs() {
           </div>
 
           {/* Google Map Section */}
-          <div className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className=" mt-10 md:mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
             <FadeDown>
               <h2 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-center py-6">
                 Find Us on Google Maps
