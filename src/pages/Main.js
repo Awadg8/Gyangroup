@@ -196,7 +196,7 @@ function Main() {
                   </div>
 
                   <NavLink
-                    to="/products/pharma"
+                    to="/about"
                     className={`inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors ${
                       activeSlide === 0
                         ? "animate__animated animate__fadeInUp animate__delay-1s"
@@ -301,7 +301,7 @@ function Main() {
                   </div>
 
                   <NavLink
-                    to="/products/pharma"
+                    to="/about"
                     className={`inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors ${
                       activeSlide === 2
                         ? "animate__animated animate__fadeInUp animate__delay-1s"
