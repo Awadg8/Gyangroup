@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import NumberTicker from "../components/NumberTicker.js";
 import BreadCrumb from "../components/BreadCrumb";
 
-import { FadeUp, FadeDown, FadeLeft } from "../components/Animation.tsx";
+import { FadeUp, FadeDown, FadeLeft } from "../components/Animation.js";
 
 import { Package, Users, Briefcase, Globe } from "lucide-react";
 

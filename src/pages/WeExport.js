@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FadeDown } from "../components/Animation.tsx";
+import { FadeDown } from "../components/Animation.js";
 import BreadCrumb from "../components/BreadCrumb";
 import Banner from "../Assets/Images/banner-6.avif";
 

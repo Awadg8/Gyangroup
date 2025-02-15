@@ -39,7 +39,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
-import { FadeDown, FadeUp } from "./Animation.tsx";
+import { FadeDown, FadeUp } from "./Animation.js";
 
 interface BreadcrumbProps {
   title: string;
@@ -47,14 +47,7 @@ interface BreadcrumbProps {
   backgroundImage?: string;
 }
 
-function Breadcrumb({
-  title,
-  currentPage,
-  backgroundImage,
-}: //   backgroundImage = "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-// backgroundImage = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
-
-BreadcrumbProps) {
+function Breadcrumb({ title, currentPage, backgroundImage }: BreadcrumbProps) {
   return (
     <div className="relative h-[400px] overflow-hidden">
       {/* Background Image with Overlay */}
@@ -90,7 +83,7 @@ BreadcrumbProps) {
             </h1>
           </FadeUp>
 
-          {/* Optional Description */}
+          {/* Page Description */}
           <FadeUp delay={0.2} className="max-w-3xl">
             <p className="text-base md:text-lg text-blue-100/90 leading-relaxed">
               Discover our journey of innovation, commitment to quality, and

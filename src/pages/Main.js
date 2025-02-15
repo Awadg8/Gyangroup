@@ -8,7 +8,7 @@ import {
   FadeLeft,
   FadeRight,
   ScaleIn,
-} from "../components/Animation.tsx";
+} from "../components/Animation.js";
 
 // AOS Animation Link
 import AOS from "aos";

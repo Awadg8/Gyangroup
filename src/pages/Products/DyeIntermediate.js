@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Banner from "../../Assets/Images/banner-3.jpg";
 
 import BreadCrumb from "../../components/BreadCrumb";
-import { FadeUp, FadeLeft, FadeDown } from "../../components/Animation.tsx";
+import { FadeUp, FadeLeft, FadeDown } from "../../components/Animation.js";
 
 const products = [
   {

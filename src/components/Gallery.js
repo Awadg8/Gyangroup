@@ -10,7 +10,7 @@ import {
 
 import {
   FadeUp,
-} from "./Animation.tsx";
+} from "./Animation.js";
 
 // Import local images
 import gallery1 from "../Assets/Images/gallery1.jpg";

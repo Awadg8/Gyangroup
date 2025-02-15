@@ -9,7 +9,7 @@ import {
   FadeDown,
   FadeLeft,
   FadeRight,
-} from "../../components/Animation.tsx";
+} from "../../components/Animation.js";
 
 import {
   BeakerIcon,

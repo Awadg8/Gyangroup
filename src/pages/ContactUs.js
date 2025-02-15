@@ -6,14 +6,14 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 
 import BreadCrumb from "../components/BreadCrumb";
 
-import Banner from "../Assets/Images/banner-4.jpg"
+import Banner from "../Assets/Images/banner-4.jpg";
 
 import {
   FadeUp,
   FadeDown,
   FadeLeft,
   FadeRight,
-} from "../components/Animation.tsx";
+} from "../components/Animation.js";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -62,7 +62,8 @@ function ContactUs() {
       <BreadCrumb
         title="Get in Touch"
         currentPage="Contact Us"
-        backgroundImage = {Banner}
+        backgroundImage={Banner}
+        // backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80"
       />
 
       <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">

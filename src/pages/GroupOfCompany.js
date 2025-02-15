@@ -4,7 +4,7 @@ import {
   // ArrowRight, Globe
 } from "lucide-react";
 
-import { FadeDown, FadeLeft, FadeRight } from "../components/Animation.tsx";
+import { FadeDown, FadeLeft, FadeRight } from "../components/Animation.js";
 
 import BreadCrumb from "../components/BreadCrumb";
 

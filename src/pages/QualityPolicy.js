@@ -14,7 +14,7 @@ import {
   FadeLeft,
   FadeRight,
   ScaleIn,
-} from "../components/Animation.tsx";
+} from "../components/Animation.js";
 
 import BreadCrumb from "../components/BreadCrumb";
 import Banner from "../Assets/Images/banner-7.avif";
