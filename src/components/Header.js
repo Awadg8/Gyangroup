@@ -442,13 +442,13 @@ function Header() {
         </button>
 
         <ul className="mt-16 text-[#1e7dd8] text-base font-medium">
-          <li className="py-4 px-6 border-b">
+          <li className="py-4 px-6 ">
             <NavLink to="/" onClick={toggleMenu}>
               Home
             </NavLink>
           </li>
 
-          <li className="py-4 px-6 border-b">
+          <li className="py-4 px-6">
             <button
               className="flex items-center justify-between w-full"
               onClick={toggleAboutSubmenu}
@@ -471,25 +471,25 @@ function Header() {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <li className="py-3 border-b">
+              <li className="py-3">
                 <NavLink to="/about" onClick={toggleMenu}>
                   Company Profile
                 </NavLink>
               </li>
 
-              <li className="py-3 border-b">
+              <li className="py-3">
                 <NavLink to="/groupOfCompany" onClick={toggleMenu}>
                   Group Of Company
                 </NavLink>
               </li>
 
-              <li className="py-3 border-b">
+              <li className="py-3">
                 <NavLink to="/achievements" onClick={toggleMenu}>
                   Achievements / Milestones
                 </NavLink>
               </li>
 
-              <li className="py-3 border-b">
+              <li className="py-3 ">
                 <NavLink to="/qualityPolicy" onClick={toggleMenu}>
                   Quality Policy
                 </NavLink>
@@ -497,7 +497,7 @@ function Header() {
             </ul>
           </li>
 
-          <li className="py-4 px-6 border-b">
+          <li className="py-4 px-6">
             <button
               className="flex items-center justify-between w-full"
               onClick={toggleProductSubmenu}
@@ -520,19 +520,19 @@ function Header() {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <li className="py-3 border-b">
+              <li className="py-3">
                 <NavLink to="/products/pharma" onClick={toggleMenu}>
                   Pharma & Api Intermediate
                 </NavLink>
               </li>
 
-              <li className="py-3 border-b">
+              <li className="py-3 ">
                 <NavLink to="/products/pigment" onClick={toggleMenu}>
                   Pigment Intermediate
                 </NavLink>
               </li>
 
-              <li className="py-3 border-b">
+              <li className="py-3">
                 <NavLink to="/products/dye" onClick={toggleMenu}>
                   Dye Intermediate
                 </NavLink>
@@ -540,7 +540,7 @@ function Header() {
             </ul>
           </li>
 
-          <li className="py-4 px-6 border-b">
+          <li className="py-4 px-6 ">
             <NavLink to="/weExport" onClick={toggleMenu}>
               We Export
             </NavLink>
