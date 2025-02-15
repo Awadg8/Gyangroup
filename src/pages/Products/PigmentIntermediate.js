@@ -85,7 +85,7 @@ function PigmentIntermediate() {
               </h1>
             </FadeDown>
 
-            <FadeUp className=" w-[70%]">
+            <FadeUp className=" w-[90%] md:w-[70%]">
               <p className=" text-gray-600 text-base mb-4">
                 With our dedication, determination and innovation we are one
                 such association who are successfully making the products and
