@@ -240,13 +240,13 @@ function Header() {
               <div className="inline-block align-top">
                 <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
                   <li className="pr-4 pt-5 pb-7">
-                    <NavLink to="/" className="sf-with-ul-pre sf-with-ul ">
+                    <NavLink to="/" className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
                       Home
                     </NavLink>
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 about-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group">
+                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
                       About Us
                       <FontAwesomeIcon
                         icon={faChevronDown}
@@ -254,29 +254,29 @@ function Header() {
                       />
                     </NavLink>
 
-                    <ul className="sub-menu about-header-menu">
-                      <li className=" ml-5 mr-3 pt-3 hover:bg-gray-200">
+                    <ul className="sub-menu about-header-menu pt-2">
+                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/about">Company Profile</NavLink>
                       </li>
 
-                      <li className=" ml-5 mr-3 pt-2">
+                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/groupOfCompany">Group Of Company</NavLink>
                       </li>
 
-                      <li className=" mr-3 ml-5 pt-2">
+                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/achievements">
                           Achievements / Milestones
                         </NavLink>
                       </li>
 
-                      <li className=" ml-5 mr-3 pb-3 pt-2">
+                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/qualityPolicy">Quality Policy</NavLink>
                       </li>
                     </ul>
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 product-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group">
+                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
                       Products
                       <FontAwesomeIcon
                         icon={faChevronDown}
@@ -285,19 +285,19 @@ function Header() {
                     </NavLink>
 
                     <ul className="sub-menu product-header-menu">
-                      <li className=" ml-5 mr-3 pt-3">
+                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/products/pharma">
                           Pharma & Api Intermediate
                         </NavLink>
                       </li>
 
-                      <li className=" ml-5 mr-3 pt-2">
+                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/products/pigment">
                           Pigment Intermediate
                         </NavLink>
                       </li>
 
-                      <li className=" ml-5 mr-3 pb-3 pt-2">
+                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/products/dye">Dye Intermediate</NavLink>
                       </li>
                     </ul>
@@ -306,14 +306,14 @@ function Header() {
                   <li className=" pr-4 pt-5 pb-7">
                     <NavLink
                       to="/weExport"
-                      className="sf-with-ul-pre sf-with-ul"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       We Export
                     </NavLink>
                   </li>
 
                   <li className="pr-4 pt-5 pb-7">
-                    <NavLink to="/blog" className="sf-with-ul-pre sf-with-ul">
+                    <NavLink to="/blog" className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
                       Blog
                     </NavLink>
                   </li>
@@ -321,7 +321,7 @@ function Header() {
                   <li className=" pt-5 pb-7">
                     <NavLink
                       to="/contactUs"
-                      className="sf-with-ul-pre sf-with-ul"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       Contact Us
                     </NavLink>

@@ -17,14 +17,14 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import worldGeoJSON from "../world-countries.json";
 
 // const markers = [
-//   { name: "Germany", coordinates: [10.4515, 51.1657], color: "#ff5722" },
-//   { name: "USA", coordinates: [-95.7129, 37.0902], color: "#3f51b5" },
+//   { name: "Germany", coordinates: [5.4515, 58.1657], color: "#ff5722" },
+//   { name: "USA", coordinates: [-105.7129, 43.0902], color: "#3f51b5" },
 //   { name: "China", coordinates: [104.1954, 35.8617], color: "#4caf50" },
-//   { name: "Japan", coordinates: [138.2529, 36.2048], color: "#ff9800" },
-//   { name: "Switzerland", coordinates: [8.2275, 46.8182], color: "#9c27b0" },
-//   { name: "France", coordinates: [2.2137, 46.6034], color: "#e91e63" },
-//   { name: "Italy", coordinates: [12.5674, 41.8719], color: "#00bcd4" },
-//   { name: "South Africa", coordinates: [22.9375, -30.5595], color: "#795548" },
+//   { name: "Japan", coordinates: [134.2529, 43.2048], color: "#ff9800" },
+//   { name: "Switzerland", coordinates: [3.9, 52.8182], color: "#9c27b0" },
+//   { name: "France", coordinates: [-5.2137, 52.6034], color: "#e91e63" },
+//   { name: "Italy", coordinates: [10.5674, 45.8719], color: "#00bcd4" },
+//   { name: "South Africa", coordinates: [17.9375, 15.5595], color: "#795548" },
 // ];
 
 const markers = [
@@ -117,7 +117,7 @@ const Map = () => {
       {/* Country Legends */}
       <div className="mb-8 md:-mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2">
         {markers.map(({ name, color }) => (
-          <div key={name} className="flex items-center space-x-2">  
+          <div key={name} className="flex items-center space-x-2">
             <FontAwesomeIcon icon={faLocationDot} color={color} size="sm" />
             <span className="text-white text-sm">{name}</span>
           </div>

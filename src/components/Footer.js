@@ -21,7 +21,7 @@ function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
       {/* Main Footer Content */}
-      <div className="pt-16 md:pt-24 pb-16">
+      <div className="py-12 md:pt-14">
         <div className="px-10 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Info */}
