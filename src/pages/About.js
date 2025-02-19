@@ -1,12 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-import NumberTicker from "../components/NumberTicker.js";
 import BreadCrumb from "../components/BreadCrumb";
 
 import { FadeUp, FadeDown, FadeLeft } from "../components/Animation.js";
-
-import { Package, Users, Briefcase, Globe } from "lucide-react";
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,8 +21,8 @@ function About() {
       />
 
       <div className="bg-gray-50">
-        {/* About Section */}
-        <section className="py-12 md:py-14 lg:py-16">
+        {/* About Section here */}
+        <section className="py-10 md:py-12 lg:py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Text Content */}
@@ -90,7 +86,7 @@ function About() {
         </section>
 
         {/* History Section */}
-        <section className="py-12 md:py-14 lg:py-16">
+        <section className="py-10 md:py-12 lg:py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center">
               <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-3xl md:text-4xl font-semibold mb-6">
@@ -124,7 +120,7 @@ function About() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-12 md:py-14 lg:py-16 bg-gray-900 text-white relative overflow-hidden">
+        <section className="py-10 md:py-12 lg:py-14 bg-gray-900 text-white relative overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{
@@ -202,68 +198,6 @@ function About() {
                 </li>
               </ul>
             </FadeUp>
-          </div>
-        </section>
-
-        {/* Statistics Section */}
-        <section className="py-12 md:py-14 lg:py-16 bg-gradient-to-b from-white to-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FadeUp>
-              <h2 className="text-3xl md:text-4xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-12">
-                Our Impact in Numbers
-              </h2>
-            </FadeUp>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  number: <NumberTicker value={120} />,
-                  label: "Products",
-                  icon: <Package className="w-6 h-6" />,
-                },
-                {
-                  number: <NumberTicker value={15} />,
-                  label: "Employees",
-                  icon: <Users className="w-6 h-6" />,
-                },
-                {
-                  number: <NumberTicker value={50} />,
-                  label: "Clients",
-                  icon: <Briefcase className="w-6 h-6" />,
-                },
-                {
-                  number: <NumberTicker value={10} />,
-                  label: "Countries We Export",
-                  icon: <Globe className="w-6 h-6" />,
-                },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className=" flex justify-center items-center flex-col">
-                    <div className="flex items-center justify-center mb-4">
-                      <div className="p-3 bg-blue-100 rounded-full text-blue-600 mr-5">
-                        {stat.icon}
-                      </div>
-
-                      <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 flex justify-center items-baseline">
-                        {stat.number}
-                        <span className="text-blue-600 ml-1">+</span>
-                      </h3>
-                    </div>
-
-                    <div className="flex justify-center items-center flex-col">
-                      <p className="text-gray-600 text-center font-semibold">
-                        {stat.label}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </section>
       </div>

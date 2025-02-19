@@ -133,16 +133,6 @@ function Header() {
     setAboutSubmenuOpen(false);
   };
 
-  // const openSearch = () => {
-  //   if (window.innerWidth < 768) {
-  //     setIsSearchOpen(true);
-  //   }
-  // };
-
-  // const closeSearch = () => {
-  //   setIsSearchOpen(false); // Close the search popup
-  // };
-
   // Handle Search Input Change
   const handleSearch = (event) => {
     const value = event.target.value.toLowerCase();
@@ -167,7 +157,7 @@ function Header() {
 
   return (
     <div>
-      {/* Top Bar Starts Here */}
+      {/* Top Bar Here */}
       <div className="top-bar bg-[#d5e4f1] py-3 px-8 hidden lg:block">
         <div className="top-bar-container">
           <div className=" flex justify-between items-center">
@@ -228,17 +218,13 @@ function Header() {
           </div>
         </div>
       </div>
-      {/* Top Bar Ends Here  */}
 
-      {/* Header Section Starts Here */}
-
+      {/* Header Section Here */}
       <header
         className={`bg-white z-[60] shadow-lg transition-transform duration-300 ${
           isSticky ? "fixed w-full top-0" : "relative"
         }`}
       >
-        {/* <div className="header-background"></div> */}
-
         <nav className=" px-3 md:px-8 py-3 lg:pt-2 lg:pb-0 relative flex items-center justify-between w-full">
           <div className="relative">
             <div className="">
@@ -254,19 +240,22 @@ function Header() {
               <div className="inline-block align-top">
                 <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
                   <li className="pr-4 pt-5 pb-7">
-                    <NavLink to="/" className="sf-with-ul-pre sf-with-ul">
+                    <NavLink to="/" className="sf-with-ul-pre sf-with-ul ">
                       Home
                     </NavLink>
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 about-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul">
+                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group">
                       About Us
-                      <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                      />
                     </NavLink>
 
                     <ul className="sub-menu about-header-menu">
-                      <li className=" ml-5 mr-3 pt-3">
+                      <li className=" ml-5 mr-3 pt-3 hover:bg-gray-200">
                         <NavLink to="/about">Company Profile</NavLink>
                       </li>
 
@@ -287,9 +276,12 @@ function Header() {
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 product-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul">
+                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group">
                       Products
-                      <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                      />
                     </NavLink>
 
                     <ul className="sub-menu product-header-menu">
@@ -338,44 +330,11 @@ function Header() {
               </div>
             </div>
 
-            {/* Search Button */}
-            {/* <div className="search-bar lg:mb-3">
-              <form
-                className="form-inline flex"
-                // role="form"
-                // action="/"
-                id="searchFrm"
-                // method="post"
-                encType="multipart/form-data"
-              >
-                <input
-                  className="form-control h-9 pl-4 pr-2 outline-none py-3 border border-[#ccc] rounded-[30px] text-[#555] mt-1 mr-2 text-sm"
-                  type="search"
-                  placeholder="Search product here..."
-                  aria-label="Search"
-                  id="txt_search"
-                  name="txt_search"
-                  required
-                />
-
-                <button
-                  className=" px-3 py-2  bg-[#1e7dd8] rounded-full "
-                  // onClick={openSearch}
-                  type="submit"
-                >
-                  <FontAwesomeIcon
-                    icon={faMagnifyingGlass}
-                    className=" text-white align-middle"
-                  />
-                </button>
-              </form>
-            </div> */}
-
             {/* Search Bar */}
             <div className="relative lg:mb-2">
               <input
                 type="text"
-                className="w-64 p-2 border border-gray-300 rounded-full outline-none pl-4"
+                className="w-64 p-2 border border-gray-300 rounded-full outline-none pl-4 focus:ring-2 focus:ring-[#1e7dd8]"
                 placeholder="Search product here..."
                 value={searchTerm}
                 onChange={handleSearch}
@@ -422,10 +381,8 @@ function Header() {
           </div>
         </nav>
       </header>
-      {/* Header Section Ends Here */}
 
-      {/* Mobile Menu Starts Here */}
-
+      {/* Mobile Menu here*/}
       <div
         ref={menuRef}
         className={`fixed top-0 right-0 h-full w-[300px] bg-white shadow-lg z-[70] transform transition-transform duration-300 ease-in-out ${
@@ -559,49 +516,6 @@ function Header() {
           </li>
         </ul>
       </div>
-
-      {/* Search Popup */}
-      {/* <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md transition-opacity duration-300 ${
-          isSearchOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <div
-          ref={searchPopupRef}
-          className="bg-white w-11/12 max-w-lg p-6 pt-10 rounded-lg shadow-lg relative"
-        >
-          <button
-            type="button"
-            className="absolute top-2 right-3 text-gray-600 text-xl"
-            onClick={closeSearch}
-          >
-            <FontAwesomeIcon icon={faTimes} className=" text-2xl" />
-          </button>
-
-          <form className="w-full flex" action="/" method="post">
-            <input
-              type="search"
-              className="w-full p-4 border border-gray-300 rounded-lg text-lg outline-[#1e7dd8]"
-              placeholder="Search for products ..."
-              required
-            />
-
-            <button
-              type="submit"
-              className=" rounded-full text-white ml-2 text-lg"
-            >
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className=" text-blue-600 align-middle"
-              />
-            </button>
-          </form>
-        </div>
-      </div> */}
-
-      {/* Mobile Menu Starts Here */}
     </div>
   );
 }

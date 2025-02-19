@@ -167,3 +167,22 @@
     left: 80px;
     width: 2px;
 }
+
+
+
+
+
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+
+
+
+
+

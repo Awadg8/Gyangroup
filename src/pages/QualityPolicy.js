@@ -60,9 +60,9 @@ function QualityPolicy() {
         backgroundImage={Banner}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 md:py-14 lg:py-16">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-10 md:py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header Section */}
+          {/* Header Section here */}
           <div className="text-center mb-8 md:mb-12">
             <FadeDown>
               <h1 className="text-4xl md:text-[42px] lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6">
@@ -110,7 +110,7 @@ function QualityPolicy() {
             ))}
           </div>
 
-          {/* Vision Statement */}
+          {/* Vision Statement here */}
           <ScaleIn>
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-xl p-8 text-white text-center">
               <div className="max-w-4xl mx-auto">

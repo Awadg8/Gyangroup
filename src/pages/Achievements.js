@@ -59,7 +59,7 @@ function Achievements() {
         backgroundImage={Banner}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 md:py-14 lg:py-16">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-10 md:py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <FadeDown className="text-center mb-8 md:mb-0">

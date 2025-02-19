@@ -8,6 +8,9 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 import StartFromTop from "./components/StartFromTop";
 
+import SampleProduct from "./pages/SampleProduct.js";
+
+
 // Stying Css Import
 import "./styles/App.css";
 
@@ -30,6 +33,8 @@ const ProductDetail = lazy(() => import("./pages/Products/ProductDetail"));
 const WeExport = lazy(() => import("./pages/WeExport"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+
+
 
 function App() {
   return (
@@ -60,6 +65,7 @@ function App() {
             <Route path="/weExport" element={<WeExport />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/Sampleproduct" element={<SampleProduct />} />
           </Routes>
         </Suspense>
         <ScrollToTop />

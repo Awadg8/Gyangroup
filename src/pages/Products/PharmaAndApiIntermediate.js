@@ -75,6 +75,7 @@ function PharmaAndApiIntermediate() {
         currentPage="Pharma & API Intermediate"
         backgroundImage={Banner}
       />
+
       <div className="py-12 md:py-14 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" text-center mb-10 flex justify-center items-center flex-col">

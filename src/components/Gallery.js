@@ -8,9 +8,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  FadeUp,
-} from "./Animation.js";
+import { FadeUp } from "./Animation.js";
 
 // Import local images
 import gallery1 from "../Assets/Images/gallery1.jpg";
@@ -27,18 +25,18 @@ import gallery11 from "../Assets/Images/gallery11.jpg";
 import gallery12 from "../Assets/Images/gallery12.jpg";
 
 const galleryItems = [
-  { thumb: gallery1 },
-  { thumb: gallery2 },
-  { thumb: gallery3 },
-  { thumb: gallery4 },
-  { thumb: gallery5 },
-  { thumb: gallery6 },
-  { thumb: gallery7 },
-  { thumb: gallery8 },
-  { thumb: gallery9 },
-  { thumb: gallery10 },
-  { thumb: gallery11 },
-  { thumb: gallery12 },
+  { thumb: gallery1, industries: "Pharmaceutical Research" },
+  { thumb: gallery2, industries: "Agrochemicals" },
+  { thumb: gallery3, industries: "Research & Development" },
+  { thumb: gallery4, industries: "Pharmaceutical Manufacture" },
+  { thumb: gallery5, industries: "Automotive Coatings" },
+  { thumb: gallery6, industries: "Industrial Lubricants" },
+  { thumb: gallery7, industries: "Color & Pigments" },
+  { thumb: gallery8, industries: "Chemical" },
+  { thumb: gallery9, industries: "Color & Pigments" },
+  { thumb: gallery10, industries: "Veterinary Medicine" },
+  { thumb: gallery11, industries: "Pesticide" },
+  { thumb: gallery12, industries: "Medical" },
 ];
 
 // Custom Styles for Full-Screen Gallery Modal
@@ -111,7 +109,9 @@ const Gallery = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-white text-lg font-bold">View Image</p>
+                <p className="text-white text-sm md:text-base lg:text-lg font-bold text-center">
+                  {item.industries}
+                </p>
               </motion.div>
             </motion.div>
           ))}

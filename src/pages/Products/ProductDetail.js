@@ -12,7 +12,6 @@ import {
 } from "../../components/Animation.js";
 
 import {
-  BeakerIcon,
   ArrowLeftIcon,
   ClipboardListIcon as ClipboardDocumentListIcon,
   RecycleIcon as MoleculeIcon,
@@ -69,7 +68,7 @@ function ProductDetail() {
 
   return (
     <div>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 md:py-14 lg:py-16">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-10 md:py-10 lg:py-10">
         <div>
           {/* Header with navigation */}
           <FadeLeft>
@@ -102,30 +101,17 @@ function ProductDetail() {
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div>
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6 sm:p-8 lg:p-10">
+                <div className="p-6 sm:p-8 lg:p-10 lg:pt-8">
                   {/* Product header */}
-                  <FadeDown className="mb-10">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
-                        {product.productStatus}
-                      </span>
-                      <span className="px-3 py-1 bg-green-50 text-green-600 rounded-full text-sm font-medium">
-                        In Stock
-                      </span>
+                  <FadeDown className="mb-8">
+                    <div className="flex items-center text-sm text-gray-500 font-medium mb-3">
+                      <MoleculeIcon className="w-4 h-4 mr-2 text-gray-500" />
+                      <span>CAS: {product.casNo}</span>
                     </div>
+
                     <h1 className="text-3xl font-bold text-gray-900 mb-3">
                       {product.name}
                     </h1>
-                    <div className="flex items-center text-sm text-gray-500 space-x-4">
-                      <div className="flex items-center">
-                        <BeakerIcon className="w-4 h-4 mr-2 text-gray-400" />
-                        <span>Product No: {product.productNo}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <MoleculeIcon className="w-4 h-4 mr-2 text-gray-400" />
-                        <span>CAS: {product.casNo}</span>
-                      </div>
-                    </div>
                   </FadeDown>
 
                   {/* Product details grid */}
@@ -141,17 +127,6 @@ function ProductDetail() {
                           />
                         </div>
                       </div>
-
-                      {/* <div className="grid grid-cols-2 gap-4">
-                        <button className="flex items-center justify-center space-x-2 px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                          <DownloadIcon className="w-5 h-5 text-gray-500" />
-                          <span className="font-medium text-gray-700">SDS</span>
-                        </button>
-                        <button className="flex items-center justify-center space-x-2 px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                          <FileTextIcon className="w-5 h-5 text-gray-500" />
-                          <span className="font-medium text-gray-700">COA</span>
-                        </button>
-                      </div> */}
                     </div>
 
                     {/* Right column - Details */}
@@ -222,12 +197,13 @@ function ProductDetail() {
               <FadeUp className="mt-8">
                 <div className="bg-white rounded-2xl shadow-sm p-6">
                   <div className=" flex items-center mb-4">
-                  <ShieldCheck className="w-8 h-8 text-blue-600 mr-2 ml-1" />
+                    <ShieldCheck className="w-8 h-8 text-blue-600 mr-2 ml-1" />
 
                     <h2 className="text-lg font-semibold text-gray-900 ">
                       Safety Information
                     </h2>
                   </div>
+
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                     <p className="text-sm text-yellow-800">
                       Please refer to the Material Safety Data Sheet (MSDS) for
@@ -315,7 +291,7 @@ function DetailCard({
   value: string,
 }) {
   return (
-    <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-200 transition-colors">
+    <div className="bg-gray-50 rounded-xl p-3 border border-gray-200 hover:border-blue-200 transition-colors">
       <div className="flex items-center mb-2">
         <span className="text-gray-400">{icon}</span>
         <span className="ml-2 text-sm font-medium text-gray-500">{label}</span>
