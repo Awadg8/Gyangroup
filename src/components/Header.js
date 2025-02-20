@@ -140,7 +140,7 @@ function Header() {
 
     if (value.length > 0) {
       const filtered = products.filter(
-        (product) => product.name.toLowerCase().includes(value) // ✅ Now checks anywhere in the name
+        (product) => product.name.toLowerCase().includes(value) // Now checks anywhere in the name
       );
       setFilteredProducts(filtered);
     } else {
@@ -221,7 +221,7 @@ function Header() {
 
       {/* Header Section Here */}
       <header
-        className={`bg-white z-[60] shadow-lg transition-transform duration-300 ${
+        className={` bg-[#d5e4f1] lg:bg-white z-[60] shadow-lg transition-transform duration-300 ${
           isSticky ? "fixed w-full top-0" : "relative"
         }`}
       >
@@ -240,13 +240,19 @@ function Header() {
               <div className="inline-block align-top">
                 <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
                   <li className="pr-4 pt-5 pb-7">
-                    <NavLink to="/" className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
+                    <NavLink
+                      to="/"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
                       Home
                     </NavLink>
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 about-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
+                    <NavLink
+                      to="#"
+                      className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
                       About Us
                       <FontAwesomeIcon
                         icon={faChevronDown}
@@ -254,7 +260,7 @@ function Header() {
                       />
                     </NavLink>
 
-                    <ul className="sub-menu about-header-menu pt-2">
+                    <ul className="sub-menu about-header-menu">
                       <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
                         <NavLink to="/about">Company Profile</NavLink>
                       </li>
@@ -276,7 +282,10 @@ function Header() {
                   </li>
 
                   <li className="pr-4 pt-5 pb-7 product-header">
-                    <NavLink to="#" className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
+                    <NavLink
+                      to="#"
+                      className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
                       Products
                       <FontAwesomeIcon
                         icon={faChevronDown}
@@ -313,7 +322,10 @@ function Header() {
                   </li>
 
                   <li className="pr-4 pt-5 pb-7">
-                    <NavLink to="/blog" className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1">
+                    <NavLink
+                      to="/blog"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
                       Blog
                     </NavLink>
                   </li>
@@ -339,7 +351,8 @@ function Header() {
                 value={searchTerm}
                 onChange={handleSearch}
               />
-              <button className="absolute right-3 top-2 text-gray-500">
+              
+              <button className="absolute right-3 top-[0.6rem] text-gray-500">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
 

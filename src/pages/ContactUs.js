@@ -103,7 +103,7 @@ function ContactUs() {
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none
                        ${
                          formData.name
-                           ? "border-blue-500 ring-2 ring-blue-500"
+                           ? "border-blue-500 ring-2 ring-blue-500 bg-blue-100"
                            : "border-gray-300"
                        }`}
                       placeholder="Your name"
@@ -126,7 +126,7 @@ function ContactUs() {
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none
                        ${
                          formData.email
-                           ? "border-blue-500 ring-2 ring-blue-500"
+                           ? "border-blue-500 ring-2 ring-blue-500 bg-blue-100"
                            : "border-gray-300"
                        }`}
                       placeholder="your@email.com"
@@ -152,7 +152,7 @@ function ContactUs() {
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none 
                       ${
                         formData.phone
-                          ? "border-blue-500 ring-2 ring-blue-500"
+                          ? "border-blue-500 ring-2 ring-blue-500 bg-blue-100"
                           : "border-gray-300"
                       }`}
                       placeholder="Your phone number"
@@ -174,7 +174,7 @@ function ContactUs() {
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none 
                       ${
                         formData.service
-                          ? "border-blue-500 ring-2 ring-blue-500"
+                          ? "border-blue-500 ring-2 ring-blue-500 bg-blue-100"
                           : "border-gray-300"
                       }`}
                       placeholder="What service are you interested in?"
@@ -199,7 +199,7 @@ function ContactUs() {
                     className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors resize-none focus:outline-none 
                     ${
                       formData.message
-                        ? "border-blue-500 ring-2 ring-blue-500"
+                        ? "border-blue-500 ring-2 ring-blue-500 bg-blue-100"
                         : "border-gray-300"
                     }`}
                     placeholder="Your message"
@@ -208,7 +208,7 @@ function ContactUs() {
 
                 <button
                   type="submit"
-                  className="w-full flex justify-center items-center md:w-auto px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 ease-in-out"
+                  className="w-full flex justify-center items-center md:w-auto px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 ease-in-out"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
