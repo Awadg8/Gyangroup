@@ -2,10 +2,11 @@
 
 import type React from "react";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 
 import BreadCrumb from "../components/BreadCrumb";
-
 import Banner from "../Assets/Images/banner-4.jpg";
 
 import {
@@ -43,19 +44,120 @@ function ContactUs() {
     }
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission logic here
+  //   console.log("Form submitted:", formData);
+  //   // Reset form after submission
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     service: "",
+  //     message: "",
+  //   });
+  // };
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .send(
+  //       "service_in8rqko", // Replace with your Email.js service ID
+  //       "template_5oar6xu", // Replace with your Email.js template ID
+  //       formData,
+  //       "L6lggsuRYQXH1fkCr" // Replace with your Email.js public key
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("Email sent successfully:", response);
+  //         alert("Message sent successfully!");
+  //         setFormData({
+  //           name: "",
+  //           email: "",
+  //           phone: "",
+  //           service: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         console.error("Email sending failed:", error);
+  //         alert("Failed to send message. Please try again.");
+  //       }
+  //     );
+  // };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+
+    const emailParams = {
+      to_name: "Admin", // Replace or set dynamically
+      from_name: formData.name,
+      message: formData.message,
+      reply_to: formData.email, // Allows the admin to reply directly
+    };
+
+    emailjs
+      .send(
+        "service_in8rqko", // Replace with your Email.js Service ID
+        "template_tlhvwma", // Replace with your Email.js Template ID
+        emailParams,
+        "L6lggsuRYQXH1fkCr" // Replace with your Email.js Public Key
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          alert("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.error("Email sending failed:", error);
+          alert("Failed to send message. Please try again.");
+        }
+      );
   };
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   const emailParams = {
+  //     to_name: "Admin", // Change this to the recipient's name
+  //     from_name: formData.name,
+  //     email: formData.email,
+  //     message: formData.message,
+  //   };
+
+  //   emailjs
+  //     .send(
+  //       "service_in8rqko", // Replace with your Email.js Service ID
+  //       "template_5oar6xu", // Replace with your Email.js Template ID
+  //       emailParams,
+  //       "L6lggsuRYQXH1fkCr" // Replace with your Email.js Public Key
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("Email sent successfully:", response);
+  //         alert("Message sent successfully!");
+  //         setFormData({
+  //           name: "",
+  //           email: "",
+  //           phone: "",
+  //           service: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         console.error("Email sending failed:", error);
+  //         alert("Failed to send message. Please try again.");
+  //       }
+  //     );
+  // };
 
   return (
     <>
@@ -91,7 +193,7 @@ function ContactUs() {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Name *
+                      Name
                     </label>
                     <input
                       type="text"
@@ -114,7 +216,7 @@ function ContactUs() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Email *
+                      Email
                     </label>
                     <input
                       type="email"
@@ -146,6 +248,7 @@ function ContactUs() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       value={formData.phone}
                       onChange={handleChange}
                       pattern="[0-9]*"
@@ -169,6 +272,7 @@ function ContactUs() {
                       type="text"
                       id="service"
                       name="service"
+                      required
                       value={formData.service}
                       onChange={handleChange}
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none 
@@ -187,7 +291,7 @@ function ContactUs() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Message *
+                    Message
                   </label>
                   <textarea
                     id="message"
