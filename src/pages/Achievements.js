@@ -62,7 +62,7 @@ function Achievements() {
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-10 md:py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
-          <FadeDown className="text-center mb-8 md:mb-0">
+          <FadeDown className="text-center mb-4 md:mb-2">
             <div className="flex items-center justify-center mb-4">
               <Award className="h-10 w-10 text-blue-600 mr-3 hidden sm:block" />
               <h1 className="text-4xl md:text-[42px] lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">

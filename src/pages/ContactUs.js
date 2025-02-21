@@ -69,7 +69,7 @@ function ContactUs() {
       <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <FadeUp>
-            <h1 className="text-4xl md:text-[42px] lg:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-9">
+            <h1 className="text-4xl md:text-[42px] lg:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 md:mb-9">
               Contact Us
             </h1>
           </FadeUp>

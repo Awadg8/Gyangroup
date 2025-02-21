@@ -323,7 +323,7 @@ function Main() {
         </Slider>
 
         {/* Features Section */}
-        <section className="pt-20 pb-10 md:pb-12 lg:pb-14 bg-gray-50">
+        <section className="py-10 md:py-12 lg:py-14 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -611,7 +611,7 @@ function Main() {
         </section>
 
         {/* Industries Images Section */}
-        <section className="pt-10 md:pt-12 lg:pt-14 pb-20 bg-gray-50">
+        <section className="py-10 md:py-12 lg:py-14 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Gallery Starts Here */}
 
