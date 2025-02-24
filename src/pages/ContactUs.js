@@ -44,55 +44,15 @@ function ContactUs() {
     }
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // Handle form submission logic here
-  //   console.log("Form submitted:", formData);
-  //   // Reset form after submission
-  //   setFormData({
-  //     name: "",
-  //     email: "",
-  //     phone: "",
-  //     service: "",
-  //     message: "",
-  //   });
-  // };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .send(
-  //       "service_in8rqko", // Replace with your Email.js service ID
-  //       "template_5oar6xu", // Replace with your Email.js template ID
-  //       formData,
-  //       "L6lggsuRYQXH1fkCr" // Replace with your Email.js public key
-  //     )
-  //     .then(
-  //       (response) => {
-  //         console.log("Email sent successfully:", response);
-  //         alert("Message sent successfully!");
-  //         setFormData({
-  //           name: "",
-  //           email: "",
-  //           phone: "",
-  //           service: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         console.error("Email sending failed:", error);
-  //         alert("Failed to send message. Please try again.");
-  //       }
-  //     );
-  // };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const emailParams = {
       to_name: "Admin", // Replace or set dynamically
       from_name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      service: formData.service,
       message: formData.message,
       reply_to: formData.email, // Allows the admin to reply directly
     };
@@ -122,42 +82,6 @@ function ContactUs() {
         }
       );
   };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   const emailParams = {
-  //     to_name: "Admin", // Change this to the recipient's name
-  //     from_name: formData.name,
-  //     email: formData.email,
-  //     message: formData.message,
-  //   };
-
-  //   emailjs
-  //     .send(
-  //       "service_in8rqko", // Replace with your Email.js Service ID
-  //       "template_5oar6xu", // Replace with your Email.js Template ID
-  //       emailParams,
-  //       "L6lggsuRYQXH1fkCr" // Replace with your Email.js Public Key
-  //     )
-  //     .then(
-  //       (response) => {
-  //         console.log("Email sent successfully:", response);
-  //         alert("Message sent successfully!");
-  //         setFormData({
-  //           name: "",
-  //           email: "",
-  //           phone: "",
-  //           service: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         console.error("Email sending failed:", error);
-  //         alert("Failed to send message. Please try again.");
-  //       }
-  //     );
-  // };
 
   return (
     <>
