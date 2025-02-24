@@ -2,7 +2,12 @@
 
 import type React from "react";
 import { useState } from "react";
+import Loader from "../components/LoaderSmall";
 import emailjs from "emailjs-com";
+
+// For Notification
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
 
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 
@@ -17,6 +22,7 @@ import {
 } from "../components/Animation.js";
 
 function ContactUs() {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,6 +52,7 @@ function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const emailParams = {
       to_name: "Admin", // Replace or set dynamically
@@ -59,15 +66,23 @@ function ContactUs() {
 
     emailjs
       .send(
-        "service_in8rqko", // Replace with your Email.js Service ID
-        "template_tlhvwma", // Replace with your Email.js Template ID
+        "service_in8rqko", //  Email.js Service ID
+        "template_tlhvwma", // Email.js Template ID
         emailParams,
-        "L6lggsuRYQXH1fkCr" // Replace with your Email.js Public Key
+        "L6lggsuRYQXH1fkCr" // Email.js Public Key
       )
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 3000, // Closes after 3 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+          });
           setFormData({
             name: "",
             email: "",
@@ -75,16 +90,28 @@ function ContactUs() {
             service: "",
             message: "",
           });
+          setIsLoading(false);
         },
         (error) => {
           console.error("Email sending failed:", error);
-          alert("Failed to send message. Please try again.");
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+          });
+          setIsLoading(false);
         }
       );
   };
 
   return (
     <>
+      <ToastContainer />
+
       <BreadCrumb
         title="Get in Touch"
         currentPage="Contact Us"
@@ -135,6 +162,7 @@ function ContactUs() {
                       placeholder="Your name"
                     />
                   </div>
+
                   <div>
                     <label
                       htmlFor="email"
@@ -236,10 +264,18 @@ function ContactUs() {
 
                 <button
                   type="submit"
-                  className="w-full flex justify-center items-center md:w-auto px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 ease-in-out"
+                  className={`w-full flex justify-center items-center md:w-auto px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 ease-in-out
+                  ${
+                    isLoading
+                      ? "opacity-75 cursor-not-allowed"
+                      : "hover:shadow-lg"
+                  }
+                `}
+                  disabled={isLoading}
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  <span>Send Request</span>
+                  {isLoading && <Loader />}
                 </button>
               </form>
             </FadeLeft>

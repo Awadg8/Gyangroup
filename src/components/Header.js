@@ -248,69 +248,75 @@ function Header() {
                     </NavLink>
                   </li>
 
-                  <li className="pr-4 pt-5 pb-7 about-header">
-                    <NavLink
-                      to="#"
-                      className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
-                    >
-                      About Us
-                      <FontAwesomeIcon
-                        icon={faChevronDown}
-                        className="ml-1 group-hover:rotate-180 transition-all duration-500"
-                      />
-                    </NavLink>
+                  <div className=" group">
+                    <li className="pr-4 pt-5 pb-7 about-header">
+                      <NavLink
+                        to="#"
+                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      >
+                        About Us
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                        />
+                      </NavLink>
 
-                    <ul className="sub-menu about-header-menu">
-                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/about">Company Profile</NavLink>
-                      </li>
+                      <ul className="sub-menu about-header-menu">
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/about">Company Profile</NavLink>
+                        </li>
 
-                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/groupOfCompany">Group Of Company</NavLink>
-                      </li>
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/groupOfCompany">
+                            Group Of Company
+                          </NavLink>
+                        </li>
 
-                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/achievements">
-                          Achievements / Milestones
-                        </NavLink>
-                      </li>
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/achievements">
+                            Achievements / Milestones
+                          </NavLink>
+                        </li>
 
-                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/qualityPolicy">Quality Policy</NavLink>
-                      </li>
-                    </ul>
-                  </li>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/qualityPolicy">Quality Policy</NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
 
-                  <li className="pr-4 pt-5 pb-7 product-header">
-                    <NavLink
-                      to="#"
-                      className="sf-with-ul-pre sf-with-ul group border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
-                    >
-                      Products
-                      <FontAwesomeIcon
-                        icon={faChevronDown}
-                        className="ml-1 group-hover:rotate-180 transition-all duration-500"
-                      />
-                    </NavLink>
+                  <div className=" group">
+                    <li className="pr-4 pt-5 pb-7 product-header">
+                      <NavLink
+                        to="#"
+                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      >
+                        Products
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                        />
+                      </NavLink>
 
-                    <ul className="sub-menu product-header-menu">
-                      <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/products/pharma">
-                          Pharma & Api Intermediate
-                        </NavLink>
-                      </li>
+                      <ul className="sub-menu product-header-menu">
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/pharma">
+                            Pharma & Api Intermediate
+                          </NavLink>
+                        </li>
 
-                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/products/pigment">
-                          Pigment Intermediate
-                        </NavLink>
-                      </li>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/pigment">
+                            Pigment Intermediate
+                          </NavLink>
+                        </li>
 
-                      <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                        <NavLink to="/products/dye">Dye Intermediate</NavLink>
-                      </li>
-                    </ul>
-                  </li>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/dye">Dye Intermediate</NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
 
                   <li className=" pr-4 pt-5 pb-7">
                     <NavLink
@@ -351,7 +357,7 @@ function Header() {
                 value={searchTerm}
                 onChange={handleSearch}
               />
-              
+
               <button className="absolute right-3 top-[0.6rem] text-gray-500">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
