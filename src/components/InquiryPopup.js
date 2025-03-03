@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+
+// For Sending Inquiry Email
 import emailjs from "emailjs-com";
 
 // For Notification
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
+import "react-toastify/dist/ReactToastify.css"; // Toastify styles
 
+// Import Loader
 import Loader from "./LoaderSmall";
 
 import {
@@ -57,10 +60,12 @@ const InquiryPopup: React.FC<InquiryPopupProps> = ({ product, onClose }) => {
     }
   };
 
+  // After Submit Send Inquiry Email
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
+    // Email parameter
     const emailParams = {
       to_name: "Admin", // Recipient
       from_name: formData.name,
@@ -74,6 +79,7 @@ const InquiryPopup: React.FC<InquiryPopupProps> = ({ product, onClose }) => {
       cas_no: product.casNo || "N/A", // Ensure CAS number is optional
     };
 
+    // Send Email Function
     emailjs
       .send(
         "service_in8rqko", // Email.js Service ID
@@ -119,8 +125,8 @@ const InquiryPopup: React.FC<InquiryPopupProps> = ({ product, onClose }) => {
 
   return (
     <>
-    <ToastContainer />
-    
+      <ToastContainer />
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

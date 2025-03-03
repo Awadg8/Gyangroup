@@ -119,17 +119,18 @@ function Header() {
     };
   }, []);
 
+  // Function for toggling Menu, AboutMenu, ProductMenu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const toggleAboutSubmenu = () => {
-    setAboutSubmenuOpen(!aboutSubmenuOpen); // Toggle About submenu visibility
+    setAboutSubmenuOpen(!aboutSubmenuOpen);
     setProductSubmenuOpen(false);
   };
 
   const toggleProductSubmenu = () => {
-    setProductSubmenuOpen(!productSubmenuOpen); // Toggle About submenu visibility
+    setProductSubmenuOpen(!productSubmenuOpen);
     setAboutSubmenuOpen(false);
   };
 
@@ -140,7 +141,7 @@ function Header() {
 
     if (value.length > 0) {
       const filtered = products.filter(
-        (product) => product.name.toLowerCase().includes(value) // Now checks anywhere in the name
+        (product) => product.name.toLowerCase().includes(value) // Now this will checks anywhere in the product name
       );
       setFilteredProducts(filtered);
     } else {

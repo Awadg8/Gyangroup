@@ -111,7 +111,9 @@ function CompanyCard({
                 src={company.image}
                 alt={company.name}
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+
               <div className="absolute bottom-4 left-4 text-white">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-600/80">
                   {company.shortName}

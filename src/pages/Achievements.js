@@ -1,5 +1,6 @@
 import React from "react";
 
+// Icons Import
 import {
   Building2,
   Calendar,
@@ -69,6 +70,7 @@ function Achievements() {
                 Achievements & Milestones
               </h1>
             </div>
+
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our journey of growth and excellence in Chemical Technology
             </p>
@@ -111,6 +113,7 @@ function Achievements() {
                   </span>{" "}
                   in <span className="font-semibold"> 2017</span>.
                 </p>
+
                 <div className="flex items-start border-l-4 border-blue-600 pl-6 py-2">
                   <Quote className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0" />
                   <p className="text-lg font-medium text-gray-800 italic">
@@ -145,9 +148,11 @@ function Achievements() {
             <div className="inline-flex items-center justify-center p-3 rounded-full bg-blue-100 mb-6">
               <TrendingUp className="h-6 w-6 text-blue-600" />
             </div>
+
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Looking to the Future
             </h2>
+
             <p className="text-gray-600 max-w-2xl mx-auto">
               We continue to innovate and expand, setting new benchmarks in the
               chemical and pharmaceutical industry.

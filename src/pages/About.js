@@ -8,6 +8,7 @@ import { FadeUp, FadeDown, FadeLeft } from "../components/Animation.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faPaperPlane, faGem } from "@fortawesome/free-solid-svg-icons";
 
+// Images Import
 import aboutImage from "../Assets/Images/aboutimg1.jpg";
 import Banner from "../Assets/Images/banner-8.avif";
 
@@ -140,6 +141,7 @@ function About() {
                   <div className="bg-[#f66419] rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <FontAwesomeIcon icon={faEye} className="text-2xl" />
                   </div>
+
                   <h3 className="text-2xl font-semibold">Vision</h3>
                 </div>
 
@@ -156,6 +158,7 @@ function About() {
                   <div className="bg-[#f66419] rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <FontAwesomeIcon icon={faPaperPlane} className="text-2xl" />
                   </div>
+                  
                   <h3 className="text-2xl font-semibold">Mission</h3>
                 </div>
 

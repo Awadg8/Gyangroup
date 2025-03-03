@@ -1,21 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+// For Showing Marker On MAP
 import {
   ComposableMap,
   Geographies,
   Geography,
   Marker,
 } from "react-simple-maps";
-import { motion } from "framer-motion";
-
-// SVG Import
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 // MAP Location JSON File
 import worldGeoJSON from "../world-countries.json";
 
+// SVG Icon Import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+// Those Marker We Want To Show On MAP
 const markers = [
   { name: "Germany", coordinates: [5.4515, 58.1657], color: "#f66419" },
   { name: "USA", coordinates: [-105.7129, 43.0902], color: "#f66419" },
@@ -29,7 +32,7 @@ const markers = [
 
 const Map = () => {
   const [hoveredMarker, setHoveredMarker] = useState(null);
-  
+
   return (
     <div className="flex relative flex-col items-center justify-center w-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-2xl">
       <div className="relative w-full h-full max-w-6xl aspect-[16/9] mt-8 flex justify-center items-center">
@@ -84,7 +87,7 @@ const Map = () => {
                       </div>
                     </motion.foreignObject>
                   )}
-                  
+
                   <FontAwesomeIcon
                     icon={faLocationDot}
                     color={color}
@@ -99,7 +102,7 @@ const Map = () => {
         </ComposableMap>
       </div>
 
-      {/* Country Legends */}
+      {/* Country Name On Hovering On Marker */}
       <div className="mb-8 md:-mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2">
         {markers.map(({ name, color }) => (
           <div key={name} className="flex items-center space-x-2">

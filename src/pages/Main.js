@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Gallery from "../components/Gallery";
 import { motion } from "framer-motion";
 
+// For Counting Animation
 import NumberTicker from "../components/NumberTicker.js";
 
 import {
@@ -29,7 +30,6 @@ import {
 } from "lucide-react";
 
 import { Package, Users, Briefcase, Globe } from "lucide-react";
-
 
 import PharmaImg from "../Assets/Images/pharma.jpg";
 import PigmentImg from "../Assets/Images/pigment.jpg";
@@ -99,7 +99,7 @@ function Main() {
     setActiveSlide(current); // Set the current slide as active
   };
 
-  // Slider animation here
+  // Slider Animation Setting Here
   var settings = {
     infinite: true,
     speed: 500,
@@ -124,7 +124,7 @@ function Main() {
     ],
   };
 
-  // Slider next btn
+  // Slider Next Btn
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -140,7 +140,7 @@ function Main() {
     );
   }
 
-  // Slider previous btn
+  // Slider Previous Btn
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -363,10 +363,12 @@ function Main() {
                   <span className="text-sm font-semibold tracking-[4px] text-blue-600 uppercase">
                     About Gyan Group
                   </span>
+
                   <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold">
                     Gaining knowledge, is the first step to wisdom. Sharing it,
                     is the first step to humanity.
                   </h2>
+
                   <p className="text-base text-gray-600">
                     <span className="font-semibold"> Gyan (knowledge)</span> is
                     considered as all{" "}
@@ -380,6 +382,7 @@ function Main() {
                     emancipation of its{" "}
                     <span className="font-semibold"> soul</span>.
                   </p>
+
                   <p className="text-base text-gray-600">
                     <span className="font-semibold"> Gyan </span> is dedicated
                     to <span className="font-semibold"> Green Chemistry </span>{" "}
@@ -418,6 +421,7 @@ function Main() {
                   alt="Our History"
                   className="rounded-xl shadow-2xl"
                 />
+
                 <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-blue-600/10 rounded-full -z-10" />
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-600/10 rounded-full -z-10" />
               </div>
@@ -427,6 +431,7 @@ function Main() {
                   <h2 className="text-[26px] md:text-3xl lg:text-[32px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
                     Our History
                   </h2>
+
                   <p className="text-base text-gray-600">
                     <span className="font-semibold"> Gyan </span> started its
                     journey to become a{" "}
@@ -457,11 +462,13 @@ function Main() {
                     namely Reliable life Science in
                     <span className="font-semibold"> 2017</span>.
                   </p>
+
                   <blockquote className="text-xl italic text-gray-600 border-l-4 border-blue-500 pl-4 font-light">
                     " We strive to become acknowledged Global Leaders and
                     preferred Partners in helping our Clients succeed in the
                     rapidly evolving Pharmaceutical markets."
                   </blockquote>
+
                   <NavLink
                     to="/about"
                     className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
@@ -483,6 +490,7 @@ function Main() {
                   <h2 className="text-[26px] md:text-3xl lg:text-[32px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
                     Custom Synthesis
                   </h2>
+
                   <p className="text-base text-gray-600">
                     <span className="font-semibold"> Custom synthesis </span> is
                     the process where a{" "}
@@ -501,6 +509,7 @@ function Main() {
                     </span>{" "}
                     from reactants or other substances.
                   </p>
+
                   <p className="text-base text-gray-600">
                     We are involved in numerous{" "}
                     <span className="font-semibold"> industrial projects </span>{" "}
@@ -530,6 +539,7 @@ function Main() {
               <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 You must work with us if you are looking for :
               </h3>
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {customSynthesisPoints.map((point, index) => (
                   <ScaleIn key={index} delay={index * 0.1}>

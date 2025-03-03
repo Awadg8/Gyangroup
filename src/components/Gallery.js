@@ -103,6 +103,7 @@ const Gallery = () => {
                 className="w-full h-auto transform group-hover:scale-105 transition-all duration-300"
                 loading="lazy"
               />
+              
               <motion.div
                 className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
                 initial={{ opacity: 0 }}

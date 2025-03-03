@@ -82,16 +82,6 @@ function ProductDetail() {
                     <ArrowLeftIcon className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
                     <span className="font-medium">Back to Products</span>
                   </button>
-
-                  {/*                 
-                <div className="flex space-x-4">
-                  <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                    <BookOpenIcon className="w-5 h-5" />
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                    <DownloadIcon className="w-5 h-5" />
-                  </button>
-                </div> */}
                 </div>
               </div>
             </div>
@@ -281,6 +271,7 @@ function ProductDetail() {
   );
 }
 
+// Card For Every Details
 function DetailCard({
   icon,
   label,

@@ -3,9 +3,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
+// Banner Img For BreadCrumb
 import Banner from "../../Assets/Images/banner-3.jpg";
 
 import BreadCrumb from "../../components/BreadCrumb";
+
 import { FadeUp, FadeLeft, FadeDown } from "../../components/Animation.js";
 
 const products = [
@@ -157,7 +159,6 @@ function DyeIntermediate() {
                       <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
                         CAS: {product.casNo}
                       </span>
-                      {/* Add favorite button or other status indicator if needed */}
                     </div>
 
                     <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 leading-snug">

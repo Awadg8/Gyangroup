@@ -4,6 +4,7 @@ import { FadeDown } from "../components/Animation.js";
 import BreadCrumb from "../components/BreadCrumb";
 import Banner from "../Assets/Images/banner-6.avif";
 
+//  MAP Import Here
 import Map from "../components/Map";
 
 function WeExport() {
@@ -22,12 +23,6 @@ function WeExport() {
               Countries We Export
             </h1>
           </FadeDown>
-
-          {/* <img
-            className="w-100 text-center"
-            src="https://gyangroup.in/assets/ui/image/export.JPG"
-            alt=""
-          /> */}
 
           <Map />
         </div>

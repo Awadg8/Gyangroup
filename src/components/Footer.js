@@ -38,6 +38,7 @@ function Footer() {
                 thing one has to strive to achieve not only for wellbeing of all
                 mankind but even for emancipation of its soul.
               </p>
+
               <div className="flex space-x-4 pt-0">
                 <a
                   href="https://wa.me/919825886288"
@@ -50,6 +51,7 @@ function Footer() {
                     className=" w-6 h-6 inline-block text-white"
                   />
                 </a>
+
                 <a
                   href="https://www.linkedin.com/company/gyangroup"
                   target="_blank"
@@ -69,6 +71,7 @@ function Footer() {
               <h3 className="text-white font-semibold text-lg mb-6">
                 Quick Links
               </h3>
+
               <ul className="space-y-3">
                 {[
                   { to: "/", label: "Home" },
@@ -98,6 +101,7 @@ function Footer() {
               <h3 className="text-white font-semibold text-lg mb-6">
                 Products
               </h3>
+
               <ul className="space-y-3">
                 {[
                   {
@@ -128,6 +132,7 @@ function Footer() {
               <h3 className="text-white font-semibold text-lg mb-6">
                 Get In Touch
               </h3>
+
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <MapPin
@@ -166,6 +171,7 @@ function Footer() {
               Gyan Group © Copyright All Right Reserved{" "}
               {new Date().getFullYear()}
             </p>
+            
             <div className="flex items-center text-sm text-gray-400">
               <span>Developed with</span>
               <Heart size={16} className="mx-2 text-red-500 fill-current" />

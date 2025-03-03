@@ -80,7 +80,8 @@ function QualityPolicy() {
                 products and completion of{" "}
                 <span className="font-semibold"> projects</span> on schedule.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 We empower our <span className="font-semibold"> employees</span>{" "}
                 and maintain an environment that enables individuals to achieve
                 functional excellence, continuous{" "}
