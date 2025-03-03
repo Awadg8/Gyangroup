@@ -18,6 +18,7 @@ import {
   ScaleIcon,
   BeakerIcon as BeakerIconOutline,
   // FileTextIcon,
+  // BeakerIcon,
   FlaskConicalIcon,
   BookOpenIcon,
   AlertCircleIcon,

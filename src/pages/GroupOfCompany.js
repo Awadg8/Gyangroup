@@ -121,7 +121,7 @@ function CompanyCard({
               </div>
             </div>
 
-            <div className="p-8 md:w-3/5 lg:p-12">
+            <div className="p-7 md:w-3/5 lg:p-12">
               <div className="flex items-center mb-4">
                 <Building2 className="h-6 w-6 text-blue-600 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-900">
@@ -159,7 +159,7 @@ function CompanyCard({
               </div>
             </div>
 
-            <div className="p-8 md:w-3/5 lg:p-12">
+            <div className="p-7 md:w-3/5 lg:p-12">
               <div className="flex items-center mb-4">
                 <Building2 className="h-6 w-6 text-blue-600 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-900">

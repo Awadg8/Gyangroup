@@ -302,7 +302,7 @@ function Main() {
                     >
                       Gyan started its journey to become a little giant in the
                       field of Chemical Technology by inception of Gyan
-                      Technologyin 2008.
+                      Technology in 2008.
                     </p>
                   </div>
 

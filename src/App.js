@@ -8,8 +8,6 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 import StartFromTop from "./components/StartFromTop";
 
-import SampleProduct from "./pages/SampleProduct.js";
-
 // Stying Css Import
 import "./styles/App.css";
 
@@ -62,7 +60,6 @@ function App() {
             <Route path="/weExport" element={<WeExport />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/Sampleproduct" element={<SampleProduct />} />
           </Routes>
         </Suspense>
         <ScrollToTop />

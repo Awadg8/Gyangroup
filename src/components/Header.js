@@ -369,7 +369,7 @@ function Header() {
                   {filteredProducts.map((product) => (
                     <li
                       key={product.id}
-                      className="p-3 hover:bg-gray-100 cursor-pointer text-gray-700"
+                      className="p-3 hover:bg-gray-300 cursor-pointer text-gray-700"
                       onClick={() => handleSelectProduct(product)}
                     >
                       {product.name}
