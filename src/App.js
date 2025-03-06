@@ -29,6 +29,7 @@ const ProductDetail = lazy(() => import("./pages/Products/ProductDetail"));
 
 const WeExport = lazy(() => import("./pages/WeExport"));
 const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
 
             <Route path="/weExport" element={<WeExport />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/contactUs" element={<ContactUs />} />
           </Routes>
         </Suspense>
