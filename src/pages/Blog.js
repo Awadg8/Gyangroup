@@ -116,11 +116,13 @@ export default function BlogPage() {
                       <span className="text-sm">{post.date}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-4">{post.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-[#333]">
+                      {post.title}
+                    </h3>
                     <p className="text-gray-600 mb-6">{post.description}</p>
 
                     <button
-                      className="group bg-gray-800 hover:bg-gray-900 text-white flex justify-center items-center py-2 px-4 rounded text-sm"
+                      className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white flex justify-center items-center py-2 px-4 rounded text-sm"
                       onClick={() =>
                         navigate(`/blog/${post.id}`, { state: { post } })
                       }
@@ -161,18 +163,18 @@ export default function BlogPage() {
                       <span className="text-sm">{post.date}</span>
                     </div>
 
-                    <h3 className="text-2xl font-semibold leading-none tracking-tight line-clamp-2">
+                    <h3 className="text-2xl font-semibold leading-none tracking-tight line-clamp-2 text-[#333]">
                       {post.title}
                     </h3>
 
-                    <p className="text-sm text-muted-foreground line-clamp-3">
+                    <p className="text-sm text-muted-foreground line-clamp-3 text-gray-600">
                       {post.description}
                     </p>
                   </div>
 
                   <div className=" p-6 pt-0">
                     <button
-                      className="group text-gray-800 hover:text-gray-900 hover:bg-gray-300 font-medium flex justify-center items-center py-2 px-4 rounded text-sm"
+                      className="group text-gray-800 hover:text-gray-900 bg-gray-300 md:bg-white hover:bg-gray-300 font-medium flex justify-center items-center py-2 px-4 rounded text-sm"
                       onClick={() =>
                         navigate(`/blog/${post.id}`, { state: { post } })
                       }
@@ -187,7 +189,7 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter Subscription */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12">
+        <div className=" mt-6 md:mt-12 lg:mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Newsletter

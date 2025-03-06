@@ -369,7 +369,7 @@ function Main() {
                     is the first step to humanity.
                   </h2>
 
-                  <p className="text-base text-gray-600">
+                  <p className="text-[15px] md:text-base text-gray-600">
                     <span className="font-semibold"> Gyan (knowledge)</span> is
                     considered as all{" "}
                     <span className="font-semibold">
