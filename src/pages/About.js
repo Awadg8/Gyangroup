@@ -158,7 +158,7 @@ function About() {
                   <div className="bg-[#f66419] rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <FontAwesomeIcon icon={faPaperPlane} className="text-2xl" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-semibold">Mission</h3>
                 </div>
 

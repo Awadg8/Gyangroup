@@ -12,6 +12,7 @@ import {
   FadeLeft,
   FadeRight,
   ScaleIn,
+  FadeDown
 } from "../components/Animation.js";
 
 // AOS Animation Link
@@ -360,9 +361,11 @@ function Main() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <FadeLeft>
                 <div className="space-y-6">
-                  <span className="text-sm font-semibold tracking-[4px] text-blue-600 uppercase">
-                    About Gyan Group
-                  </span>
+                  <FadeDown>
+                    <span className="text-sm font-semibold tracking-[4px] text-blue-600 uppercase">
+                      About Gyan Group
+                    </span>
+                  </FadeDown>
 
                   <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold">
                     Gaining knowledge, is the first step to wisdom. Sharing it,

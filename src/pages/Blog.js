@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import BreadCrumb from "../components/BreadCrumb";
 
 import { ArrowRight, Calendar } from "lucide-react";
 
 import Banner from "../Assets/Images/banner-5.avif";
+
+import { FadeUp, FadeDown, FadeRight } from "../components/Animation.js";
 
 interface BlogPost {
   id: number;
@@ -89,19 +90,15 @@ export default function BlogPage() {
         {blogPosts
           .filter((post) => post.featured)
           .map((post) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className=" mb-6 md:mb-16"
-            >
+            <div key={post.id} className=" mb-6 md:mb-16">
               <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
                 <div className="grid md:grid-cols-2 md:gap-6">
                   <div className="relative h-64 md:h-full">
-                    <div className="absolute top-4 text-[15px] left-4 z-10 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-1 px-2 rounded-lg shadow-2xl">
-                      FEATURED
-                    </div>
+                    <FadeUp>
+                      <div className="absolute top-4 text-[15px] left-4 z-10 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-1 px-2 rounded-lg shadow-2xl">
+                        FEATURED
+                      </div>
+                    </FadeUp>
 
                     <img
                       src={post.image || "/placeholder.svg"}
@@ -110,30 +107,37 @@ export default function BlogPage() {
                     />
                   </div>
 
-                  <div className=" py-6 px-2 md:p-6">
-                    <div className="flex items-center gap-2 text-gray-500 mb-4">
-                      <Calendar className="h-4 w-4" />
-                      <span className="text-sm">{post.date}</span>
-                    </div>
+                  <div className="py-6 px-2 md:p-6">
+                    <FadeDown>
+                      <div className="flex items-center gap-2 text-gray-500 mb-4">
+                        <Calendar className="h-4 w-4" />
+                        <span className="text-sm">{post.date}</span>
+                      </div>
+                    </FadeDown>
 
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#333]">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6">{post.description}</p>
+                    <FadeRight>
+                      <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#333]">
+                        {post.title}
+                      </h3>
 
-                    <button
-                      className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white flex justify-center items-center py-2 px-4 rounded text-sm"
-                      onClick={() =>
-                        navigate(`/blog/${post.id}`, { state: { post } })
-                      }
-                    >
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </button>
+                      <p className="text-gray-600 mb-6">{post.description}</p>
+                    </FadeRight>
+
+                    <FadeUp>
+                      <button
+                        className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white flex justify-center items-center py-2 px-4 rounded text-sm"
+                        onClick={() =>
+                          navigate(`/blog/${post.id}`, { state: { post } })
+                        }
+                      >
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </FadeUp>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
 
         {/* Regular Posts Grid */}
@@ -142,13 +146,8 @@ export default function BlogPage() {
           {blogPosts
             .filter((post) => !post.featured)
             .map((post, index) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full hover:shadow-lg transition-shadow duration-300">
+              <div key={post.id}>
+                <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full hover:shadow-2xl hover:scale-105 transition-all duration-300">
                   <div className="relative h-48">
                     <img
                       src={post.image || "/placeholder.svg"}
@@ -184,7 +183,7 @@ export default function BlogPage() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
         </div>
 

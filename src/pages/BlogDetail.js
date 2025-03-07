@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import { FadeUp, FadeDown, FadeRight } from "../components/Animation.js";
+
 const blogPosts = [
   {
     id: 1,
@@ -87,31 +89,44 @@ export default function BlogDetail() {
 
         {/* Related Blogs (Right Sidebar) */}
         <div>
-          <h3 className="text-xl font-semibold mb-2 md:mb-4 bg-gradient-to-r bg-clip-text text-transparent from-blue-600 to-blue-800">Related Blogs</h3>
-          {relatedPosts.slice(0, 3).map((item) => (
+          <FadeUp>
+            <h3 className="text-xl font-semibold mb-2 md:mb-4 bg-gradient-to-r bg-clip-text text-transparent from-blue-600 to-blue-800">
+              Related Blogs
+            </h3>
+          </FadeUp>
+
+          {relatedPosts.slice(0, 3).map((item, index) => (
             <div
               key={item.id}
-              className=" mb-2 md:mb-4 p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+              className=" mb-2 md:mb-4 p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-2xl transition cursor-pointer"
               onClick={() =>
                 navigate(`/blog/${item.id}`, { state: { post: item } })
               }
             >
-              <h4 className="text-base md:text-lg font-medium text-[#333] leading-tight">
-                {item.title}
-              </h4>
-              <p className="text-sm text-gray-500">{item.date}</p>
+              <FadeRight delay={index * 0.1}>
+                <h4 className="text-base md:text-lg font-medium text-[#333] leading-tight">
+                  {item.title}
+                </h4>
+
+                <p className="text-sm text-gray-500">{item.date}</p>
+              </FadeRight>
             </div>
           ))}
         </div>
       </div>
 
       {/* Related Blogs (Bottom Section) */}
-      <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mt-6 md:mt-12">More Blogs</h3>
+      <FadeDown>
+        <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mt-6 md:mt-12">
+          More Blogs
+        </h3>
+      </FadeDown>
+
       <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-3 md:mt-6">
         {relatedPosts.slice(0, 3).map((item) => (
           <div
             key={item.id}
-            className=" p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+            className=" p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-xl hover:scale-105 transition duration-300 cursor-pointer"
             onClick={() =>
               navigate(`/blog/${item.id}`, { state: { post: item } })
             }
