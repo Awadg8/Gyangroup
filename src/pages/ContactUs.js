@@ -336,7 +336,7 @@ function ContactUs() {
             <div className="w-full h-96">
               <iframe
                 title="Gyan Group Location"
-                className="w-full h-full border-0"
+                className="w-full h-full border-0 rounded-lg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.6208541743035!2d72.85226060322152!3d20.289004730506406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d302a70efa6d%3A0x4a9971325fa7e1a7!2sReliable%20Life%20Science!5e1!3m2!1sen!2sin!4v1739184823097!5m2!1sen!2sin"
                 allowFullScreen
                 loading="lazy"

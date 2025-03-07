@@ -65,35 +65,40 @@ export default function BlogDetail() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-6 md:gap-8">
         {/* Blog Content */}
-        <div className="md:col-span-2 border rounded-lg p-4">
+        <div className="md:col-span-2 border rounded-lg p-2 md:p-4">
           <img
             src={post.image}
             alt={post.title}
             className="w-full h-64 object-contain rounded-lg"
           />
-          <h1 className="text-2xl font-semibold mt-6 text-[#333]">
+          <h1 className=" text-xl md:text-2xl font-semibold mt-6 text-[#333]">
             {post.title}
           </h1>
           <p className="text-gray-500 mt-2">{post.date}</p>
-          <p align="justify" className="mt-4 text-base text-gray-600">
+          <p
+            align="justify"
+            className="mt-4 text-[15px] md:text-base text-gray-600"
+          >
             {post.content}
           </p>
         </div>
 
         {/* Related Blogs (Right Sidebar) */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Related Blogs</h3>
+          <h3 className="text-xl font-semibold mb-2 md:mb-4 bg-gradient-to-r bg-clip-text text-transparent from-blue-600 to-blue-800">Related Blogs</h3>
           {relatedPosts.slice(0, 3).map((item) => (
             <div
               key={item.id}
-              className="mb-4 p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+              className=" mb-2 md:mb-4 p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
               onClick={() =>
                 navigate(`/blog/${item.id}`, { state: { post: item } })
               }
             >
-              <h4 className="text-lg font-medium text-[#333]">{item.title}</h4>
+              <h4 className="text-base md:text-lg font-medium text-[#333] leading-tight">
+                {item.title}
+              </h4>
               <p className="text-sm text-gray-500">{item.date}</p>
             </div>
           ))}
@@ -101,12 +106,12 @@ export default function BlogDetail() {
       </div>
 
       {/* Related Blogs (Bottom Section) */}
-      <h3 className="text-2xl font-semibold mt-12">More Blogs</h3>
-      <div className="grid md:grid-cols-3 gap-6 mt-6">
+      <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mt-6 md:mt-12">More Blogs</h3>
+      <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-3 md:mt-6">
         {relatedPosts.slice(0, 3).map((item) => (
           <div
             key={item.id}
-            className="p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+            className=" p-2 md:p-4 border rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
             onClick={() =>
               navigate(`/blog/${item.id}`, { state: { post: item } })
             }
@@ -116,7 +121,9 @@ export default function BlogDetail() {
               alt={item.title}
               className="w-full h-40 object-cover rounded-lg"
             />
-            <h4 className="mt-4 text-lg font-medium">{item.title}</h4>
+            <h4 className="mt-4 text-base md:text-lg font-medium text-[#333] leading-tight">
+              {item.title}
+            </h4>
             <p className="text-sm text-gray-500">{item.date}</p>
           </div>
         ))}

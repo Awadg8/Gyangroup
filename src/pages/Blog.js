@@ -94,10 +94,10 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-16"
+              className=" mb-6 md:mb-16"
             >
               <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 md:gap-6">
                   <div className="relative h-64 md:h-full">
                     <div className="absolute top-4 text-[15px] left-4 z-10 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-1 px-2 rounded-lg shadow-2xl">
                       FEATURED
@@ -110,13 +110,13 @@ export default function BlogPage() {
                     />
                   </div>
 
-                  <div className="p-6">
+                  <div className=" py-6 px-2 md:p-6">
                     <div className="flex items-center gap-2 text-gray-500 mb-4">
                       <Calendar className="h-4 w-4" />
                       <span className="text-sm">{post.date}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-4 text-[#333]">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#333]">
                       {post.title}
                     </h3>
                     <p className="text-gray-600 mb-6">{post.description}</p>
@@ -157,13 +157,13 @@ export default function BlogPage() {
                     />
                   </div>
 
-                  <div className="flex flex-col space-y-1.5 p-6">
+                  <div className="flex flex-col space-y-1.5 py-6 px-2 md:p-6">
                     <div className="flex items-center gap-2 text-gray-500 mb-2">
                       <Calendar className="h-4 w-4" />
                       <span className="text-sm">{post.date}</span>
                     </div>
 
-                    <h3 className="text-2xl font-semibold leading-none tracking-tight line-clamp-2 text-[#333]">
+                    <h3 className=" text-xl md:text-2xl font-semibold leading-tight tracking-tight line-clamp-2 text-[#333]">
                       {post.title}
                     </h3>
 
@@ -172,7 +172,7 @@ export default function BlogPage() {
                     </p>
                   </div>
 
-                  <div className=" p-6 pt-0">
+                  <div className=" pb-6 px-2 md:p-6 pt-0">
                     <button
                       className="group text-gray-800 hover:text-gray-900 bg-gray-300 md:bg-white hover:bg-gray-300 font-medium flex justify-center items-center py-2 px-4 rounded text-sm"
                       onClick={() =>
