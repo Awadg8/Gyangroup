@@ -171,7 +171,7 @@ function Footer() {
               Gyan Group © Copyright All Right Reserved{" "}
               {new Date().getFullYear()}
             </p>
-            
+
             <div className="flex items-center text-sm text-gray-400">
               <span>Developed with</span>
               <Heart size={16} className="mx-2 text-red-500 fill-current" />

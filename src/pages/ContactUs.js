@@ -7,7 +7,7 @@ import emailjs from "emailjs-com";
 
 // For Notification
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
+import "react-toastify/dist/ReactToastify.css";
 
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 

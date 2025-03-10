@@ -96,7 +96,7 @@ function QualityPolicy() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12 md:mb-16">
             {policyPoints.map((point, index) => (
               <FadeUp key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 py-6 md:p-6 h-full border">
+                <div className="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 py-6 md:p-6 h-full border">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 ml-2">
                       {point.icon}

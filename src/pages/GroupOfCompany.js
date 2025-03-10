@@ -172,7 +172,7 @@ function CompanyCard({
               </p>
 
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
+                <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-[2px]" />
                 <p className="text-gray-600">{company.address}</p>
               </div>
             </div>

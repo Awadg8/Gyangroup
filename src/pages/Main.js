@@ -546,7 +546,7 @@ function Main() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {customSynthesisPoints.map((point, index) => (
                   <ScaleIn key={index} delay={index * 0.1}>
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:scale-105 transition-all">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
                           {point.icon}
